@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-wk^ql^q5zep%_i(^_bxdec0akq9o%zpgv2h_e094m7cq)ys&$x
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['seojangwon.xyz', 'jangwon-aghpgxh3e0cdefcj.canadacentral-01.azurewebsites.net', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
@@ -147,3 +147,6 @@ STORAGES = {
         "BACKEND": "django.contrib.staticfiles.storage.StaticFilesStorage",
     },
 }
+
+
+CSRF_TRUSTED_ORIGINS = ['https://'+os.environ['WEBSITE_HOSTNAME']]
