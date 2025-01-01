@@ -146,7 +146,7 @@ h2{
 h1{
     font-size: 25px;
     margin-bottom: 6px;
-    color: black;
+    color: white;
   }
 .text{
   height: calc(100vh - 60px);
@@ -221,21 +221,21 @@ h1{
   .introtext{
     padding-bottom: 15px;
     font-size: 25px;
-    color: black;
+    color: white;
     padding-top: 50px;
   }
 
   .scrollable-container {
     display: flex; /* Enable horizontal layout */
     overflow-x: auto; /* Allow horizontal scrolling */
-    max-width: 360px; /* Limit the visible width to fit 3 images (80px each + margin) */
+    max-width: 30vh; /* Limit the visible width to fit 3 images (80px each + margin) */
     margin: 0 auto; /* Center the container horizontally */
     padding: 10px 20px 10px 20px; /* Optional: Add padding for better aesthetics */
     scrollbar-width: none; /* Hide scrollbar in Firefox */
     -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
-    border: 2px solid gray; /* Add a border */
     border-radius: 10px;
     position: relative;
+    background-color: lightsteelblue;
 }
 
 .scrollable-container::-webkit-scrollbar {
@@ -262,4 +262,8 @@ h1{
   color: #555; /* Optional: Text color */
   margin-right: 10px;
   user-select: none;
+}
+
+.contactdesc{
+  color: black;
 }
