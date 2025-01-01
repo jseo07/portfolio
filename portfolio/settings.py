@@ -26,7 +26,13 @@ SECRET_KEY = 'lOJkDN72zC2EP1FKY-N9GA_4JTcCDYVxmpQOk6I73BpzGDV9xpU6WmoT3Bcpong1kW
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', 'seojangwon.xyz', ' jangwon-aghpgxh3e0cdefcj.canadacentral-01.azurewebsites.net']
+ALLOWED_HOSTS = ['*', 'seojangwon.xyz', 'jangwon-aghpgxh3e0cdefcj.canadacentral-01.azurewebsites.net']
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://seojangwon.xyz',
+    'htpps://jangwon-aghpgxh3e0cdefcj.canadacentral-01.azurewebsites.net'
+]
+
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
