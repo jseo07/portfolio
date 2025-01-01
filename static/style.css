@@ -67,6 +67,7 @@ nav.sticky .logo a{
  nav.sticky .nav-links li a:hover{
   color: #0E2431;
 }
+
 .home{
   height: 100vh;
   width: 100%;
@@ -74,11 +75,35 @@ nav.sticky .logo a{
   background-position: center;
   background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
+  background-color: #F1F1F2;
 }
 h2{
   font-size: 30px;
   margin-bottom: 6px;
   color: #4070f4;
+  padding-bottom: 20px;
+}
+
+.intro{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  text-align: Left;
+}
+
+.intro h2{
+  font-size: 70px;
+}
+
+.intro h1{
+  font-weight: lighter;
+  line-height: 1.6;
 }
 
 #contact{
@@ -181,3 +206,60 @@ h1{
   .form-group button:hover {
     background-color: #0056b3;
   }
+
+
+  .scrol-wrapper{
+    text-align: center;
+    line-height: 2;
+    width: 90%;
+  }
+
+  .scrol-wrapper img{
+    padding: 10px;
+  }
+
+  .introtext{
+    padding-bottom: 15px;
+    font-size: 25px;
+    color: black;
+    padding-top: 50px;
+  }
+
+  .scrollable-container {
+    display: flex; /* Enable horizontal layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    max-width: 360px; /* Limit the visible width to fit 3 images (80px each + margin) */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 10px 20px 10px 20px; /* Optional: Add padding for better aesthetics */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    border: 2px solid gray; /* Add a border */
+    border-radius: 10px;
+    position: relative;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
+}
+
+.scrollable-container img {
+    margin-right: 10px; /* Add some spacing between images */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    padding-bottom: 0;
+    user-select: none;
+}
+
+.scrollable-container.dragging {
+  cursor: grabbing; /* Change cursor to grabbing while dragging */
+}
+
+.image-container {
+  text-align: center; /* Center-align the content */
+}
+
+.image-caption {
+  font-size: 16px; /* Adjust text size as needed */
+  color: #555; /* Optional: Text color */
+  margin-right: 10px;
+  user-select: none;
+}

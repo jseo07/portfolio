@@ -1,6 +1,154 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block main %}
+<div class="intro">
+    <div>
+        <h2>
+            Data Scientist <br> & Software Developer
+        </h2>
+        <h1>
+            I am a data scientist and software developer with a passion for leveraging data and 
+            machine learning to develop innovative, impactful software solutions. Here are some technologies I am proficient with!
+        </h1>
+    </div>
+    <div class="scrol-wrapper">
+        <p class="introtext">Programming Language</p>
+        <div class="scrollable-container">
+            <div class="image-container">
+                <img src="{% static 'images/python.png' %}" alt="python" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Python</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/java.png' %}" alt="java" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Java</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/cpp.png' %}" alt="cpp" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">C++</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/html.png' %}" alt="html" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">HTML</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/css-3.png' %}" alt="css" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">CSS</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/js.png' %}" alt="js" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">JavaScript</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/sql-server.png' %}" alt="sql" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">SQL</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/r.png' %}" alt="r" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">R</p>
+            </div>
+        </div>
+
+        <p class="introtext">Tools and Libraries</p>
+        <div class="scrollable-container">
+            <div class="image-container">
+                <img src="{% static 'images/Django.png' %}" alt="Django" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Django</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Tensorflow.png' %}" alt="Tensorflow" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Tensorflow</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Pytorch.png' %}" alt="Pytorch" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">PyTorch</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/scikit-learn.png' %}" alt="scikit-learn" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">scikit-learn</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Pandas.png' %}" alt="Pandas" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Pandas</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Numpy.png' %}" alt="Numpy" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Numpy</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/tableau.svg' %}" alt="tableau" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Tableau</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Matplotlib.png' %}" alt="Matplotlib" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">MatPlotLib</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Ploty.png' %}" alt="Ploty" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Plotly</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/mysql-database.png' %}" alt="mysql-database" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">MySQL</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Git.png' %}" alt="Git" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Git</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Azure.png' %}" alt="Azure" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Azure</p>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Heroku.png' %}" alt="Heroku" class="hover-image" style="width:80px; height:auto;">
+                <p class="image-caption">Heroku</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const scrollableContainers = document.querySelectorAll('.scrollable-container');
+
+    scrollableContainers.forEach((container) => {
+        let isDragging = false;
+        let startX;
+        let scrollLeft;
+
+        // Prevent image dragging
+        container.querySelectorAll('img').forEach((img) => {
+            img.setAttribute('draggable', 'false');
+        });
+
+        // Mouse events for drag-to-scroll
+        container.addEventListener('mousedown', (e) => {
+            isDragging = true;
+            container.classList.add('dragging');
+            startX = e.pageX - container.offsetLeft;
+            scrollLeft = container.scrollLeft;
+        });
+
+        container.addEventListener('mouseleave', () => {
+            isDragging = false;
+            container.classList.remove('dragging');
+        });
+
+        container.addEventListener('mouseup', () => {
+            isDragging = false;
+            container.classList.remove('dragging');
+        });
+
+        container.addEventListener('mousemove', (e) => {
+            if (!isDragging) return;
+            e.preventDefault();
+            const x = e.pageX - container.offsetLeft;
+            const walk = (x - startX) * 1.5; // Adjust scroll speed
+            container.scrollLeft = scrollLeft - walk;
+        });
+    });
+
+</script>
+{% endblock %}
+
 {% block content %}
 
 <div id="text" class="text">
