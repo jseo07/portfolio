@@ -153,16 +153,161 @@
 
 <div id="text" class="text">
     <p><h2>My Works</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed culpa minus ducimus nostrum aspernatur qui odit assumenda consectetur dolorum autem. Impedit aperiam nemo fuga numquam molestias sit quaerat quae doloribus est facilis ab, asperiores voluptatum dolore? Dignissimos porro corporis, veniam esse animi pariatur vitae quas est, amet minima et ratione tenetur earum officiis fugiat saepe eius nisi dolor, iusto voluptas obcaecati nam! Facere excepturi quibusdam, magni fugit quia, accusantium eum dolorum id dolores. Enim consectetur tempore distinctio, natus dolore incidunt. Repellendus ut natus, sit at inventore, reiciendis. Praesentium, tempore. Laborum consequuntur, illo voluptatem nobis rem molestias corporis laboriosam sint officiis, inventore atque, repellendus. Blanditiis molestiae minima consequuntur et accusamus illum, laboriosam placeat perferendis sed. Maiores eos laboriosam quas eius ratione dignissimos laborum doloremque, praesentium obcaecati cum consectetur magnam accusamus, esse, corporis aliquid pariatur mollitia corrupti cupiditate ipsa iure enim provident. Earum, voluptate! Similique quas veniam voluptas, maiores perspiciatis error voluptatum!</p>
-    <br><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima libero consequatur necessitatibus voluptatibus vel, ut asperiores magnam velit, eum veritatis natus, dolorum sit ipsum quidem laborum! Facilis officia itaque, explicabo harum illum, repellat nihil corporis! Dolor, libero vero, consequuntur sed necessitatibus corporis. Facilis autem natus animi pariatur quaerat rerum nemo quibusdam veritatis provident error nostrum ratione dolore officiis non amet, quidem dolores eaque sint blanditiis odio porro ut, quam soluta. Necessitatibus, aperiam eum doloremque voluptate qui aliquid consequatur aspernatur debitis expedita unde vitae quia officiis, delectus, possimus ratione ex rerum dignissimos maxime molestiae asperiores. Tempora recusandae debitis exercitationem quo facere reprehenderit tenetur, dolore laboriosam repellat modi. Magnam ratione iste quo perspiciatis explicabo deserunt temporibus quaerat inventore quod accusantium atque, dolores commodi nobis distinctio, fugit illum, soluta quisquam est in omnis! Recusandae incidunt voluptatem, consequuntur doloremque! Nisi incidunt, iure quidem dolores odit sint, ut quam. Ipsum, maiores doloremque velit numquam quisquam.</p>
+    <div class="projectscontainer">
+        <div class="projectcontainer">
+            <div class="project">
+                <div class="content">
+                    <div class="title">Stock Dividend Prediction with LSTM</div>
+                </div>
+                <img src="https://via.placeholder.com/300" alt="Card Image" draggable="false">
+                <div class="content">
+                    <div class="description">
+                        A Django based web app. Predicts dividend payments of selected stock with Long Short-Term Memory model.
+                        <a href="{% url 'under-construction' %}">Read more here.</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <div class="projectcontainer">
+            <div class="project">
+                <div class="content">
+                    <div class="title">Criminal Composite Generation with GAN</div>
+                </div>
+                <img src="https://via.placeholder.com/300" alt="Card Image" draggable="false">
+                <div class="content">
+                    <div class="description">
+                    Optimizing Generative Adversarial Network to produce images of human faces that iteratively improves resemblance of generated images.
+                    <a href="{% url 'under-construction' %}">Read more here.</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <div class="projectcontainer">
+            <div class="project">
+                <div class="content">
+                    <div class="title">Website for SAMPO Real Estate office</div>
+                </div>
+                <img src="https://via.placeholder.com/300" alt="Card Image" draggable="false">
+                <div class="content">
+                    <div class="description">
+                        Django-based real estate website featuring an admin blogging system, interactive maps with land information markers, and user-friendly street-level imagery to enhance client engagement. 
+                        <a href="{% url 'under-construction' %}">Read more here.</a>
+                    </div>
+                </div>
+                </div>
+        </div>
+        <div class="projectcontainer">
+            <div class="project">
+                <div class="content">
+                    <div class="title">Multiplayer Tetris</div>
+                </div>
+                <img src="https://via.placeholder.com/300" alt="Card Image" draggable="false">
+                <div class="content">
+                    <div class="description">
+                    Multiplayer Tetris developed in Java. 
+                    <a href="{% url 'under-construction' %}">Read more here.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projectcontainer">
+            <div class="project">
+                <div class="content">
+                    <div class="title">Card Title</div>
+                </div>
+                <img src="https://via.placeholder.com/300" alt="Card Image" draggable="false">
+                <div class="content">
+                    <div class="description">
+                    This is a short description of the card. It provides brief information about the content of the card.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="projectcontainer">
+            <div class="project">
+                <div class="content">
+                    <div class="title">Card Title</div>
+                </div>
+                <img src="https://via.placeholder.com/300" alt="Card Image" draggable="false">
+                <div class="content">
+                    <div class="description">
+                    This is a short description of the card. It provides brief information about the content of the card.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
+<script>
+    const elements = document.getElementsByClassName('projectscontainer');
+    const container = elements[0];
+    let isDragging = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+      isDragging = true;
+      container.classList.add('dragging');
+      startX = e.pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+      isDragging = false;
+      container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mouseup', () => {
+      isDragging = false;
+      container.classList.remove('dragging');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - container.offsetLeft;
+      const walk = (x - startX) * 0.8; // Adjust scrolling speed
+      container.scrollLeft = scrollLeft - walk;
+    });
+
+    // For touch devices
+    container.addEventListener('touchstart', (e) => {
+      isDragging = true;
+      startX = e.touches[0].pageX - container.offsetLeft;
+      scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('touchend', () => {
+      isDragging = false;
+    });
+
+    container.addEventListener('touchmove', (e) => {
+      if (!isDragging) return;
+      const x = e.touches[0].pageX - container.offsetLeft;
+      const walk = (x - startX) * 0.8; // Adjust scrolling speed
+      container.scrollLeft = scrollLeft - walk;
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container-contact">
     <div id="contact" class="text">
         <div>
             <h2>Contact</h2>
             <h1 class="contactdesc">I would love to connect! Connect with me through any of my socials below, or leave me a short message!</h1>
             <div class="socials">
-                <a href="" target="_blank"><img src="{% static 'images/mail.png' %}" alt="mail" style="width:40px; height:auto;"></a>
+                <a href="mailto:jangwonseo079@gmail.com" target="_blank"><img src="{% static 'images/mail.png' %}" alt="mail" style="width:40px; height:auto;"></a>
                 <a href="https://www.linkedin.com/in/jangwon-seo-" target="_blank"><img src="{% static 'images/linkedin.png' %}" alt="linkedin" style="width:40px; height:auto;"></a>
                 <a href="https://www.github.com/jseo07/" target="_blank"><img src="{% static 'images/github.png' %}" alt="github" style="width:40px; height:auto;"></a>
             </div>

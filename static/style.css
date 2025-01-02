@@ -20,6 +20,7 @@ nav{
   width: 100%;
   padding: 20px;
   transition: all 0.4s ease;
+  z-index: 10000;
 }
 nav.sticky{
   padding: 15px 20px;
@@ -150,13 +151,18 @@ h1{
   }
 .text{
   height: calc(100vh - 60px);
-  text-align: justify;
+  text-align: center;
   padding: 40px 80px;
   box-shadow: -5px 0 10px rgba(0, 0, 0, 0.1);
   scroll-margin-top: 60px;
+
 }
 
-
+.text h2{
+  padding-top: 40px;
+  font-size: 50px;
+  padding-bottom: 50px;
+}
 .form-container {
     text-align: left;
     max-width: 100%;
@@ -266,4 +272,69 @@ h1{
 
 .contactdesc{
   color: black;
+}
+
+
+
+
+.project {
+  width: 30vh;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  left: 50%;
+  user-select: none
+}
+
+.project img {
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.project .content {
+  padding: 16px;
+}
+.project .title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 4px;
+}
+.project .description {
+  text-align: left;
+  font-size: 1em;
+  color: black;
+  line-height: 1.4;
+}
+
+.projectscontainer{
+  display: grid;
+  height: 70%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  overflow-x: auto;
+  max-width: 100%;
+  padding: 10px 20px 10px 20px;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projectscontainer::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
+}
+
+.projectscontainer.dragging {
+  cursor: grabbing; /* Change cursor to grabbing while dragging */
+}
+
+
+.projectcontainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

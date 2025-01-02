@@ -43,3 +43,6 @@ def contact_view(request):
     else:
         form = ContactForm()
     return render(request, 'index.html', {'form': form})
+
+def under_construction(request):
+    return render(request, 'under_construction.html')
