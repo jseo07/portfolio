@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="postcontainer">
+    <div class="postbox">
+        <h2>Stock Dividend Prediction with LSTM</h2>
+        <div class="images">
+            <div>
+                <img src="{% static 'images/dashboard.png' %}" alt=""> 
+                <p class="imgdescription">Fig 1. Tableau Dashboard with visualization of past stock prices and dividends of Microsoft (MSFT).</p>
+            </div>
+            <div class="subimages">
+                <div>
+                    <img src="{% static 'images/predictiongraph.png' %}" alt="">
+                    <p class="imgdescription">Fig 2. Actual past dividends compared to LSTM-predicted dividends of Microsoft (MSFT).</p>
+                </div>
+                <div>
+                    <img src="{% static 'images/predictionimage2.png' %}" alt="">
+                    <p class="imgdescription">Fig 3. Historical Dividend of Microsoft and 5 next dividends predicted by LSTM model.</p>
+                </div>
+            </div>
+        </div>
+        <div class="postdescription">
+            <i>2 minute read</i> <br>
+            <a href="https://predict-dividend.seojangwon.xyz" target="_blank">Website (Under Construction)</a> <br>
+            <a href="https://www.kaggle.com/code/jseo079/dividend-prediction-with-lstm" target="_blank">Read more about LSTM model construction and evaluation here (Kaggle Post)</a>
+            <h3>Building a Django-Based Web Application for Stock Dividend Analysis and Prediction</h3>
+            <p>
+                The foundation of the application is built on Django, a robust framework known for its scalability and efficiency. 
+                To make the platform truly impactful, I integrated the yfinance API, allowing the app to retrieve real-time stock prices 
+                and dividend data. Users can interact with the platform to visualize trends, analyze market behaviors, and draw meaningful 
+                conclusions through intuitive statistical analyses.
+            </p>
+
+            <h3>Enhancing User Engagement with Interactive Data Visualizations</h3>
+            <p>
+                To offer a seamless user experience, I embedded a Tableau dashboard within the application. This integration provides dynamic 
+                and visually appealing stock charts and trend analyses, empowering users to explore the data interactively. Whether it's 
+                identifying patterns or making data-driven predictions, the Tableau dashboard elevates the application's usability and impact.
+            </p>
+
+            <h3>Harnessing LSTM for Accurate Dividend Predictions</h3>
+            <p>
+                Predicting future dividends required a robust approach to handling time-series data. For this, I designed and trained a 
+                Long Short-Term Memory (LSTM) model using TensorFlow/Keras and scikit-learn. The model captured temporal dependencies 
+                effectively, achieving an impressive 83.42% prediction accuracy. By optimizing the model with the Adam optimizer, I reduced 
+                the mean squared error and enhanced its performance by 99.57% compared to the traditional SGD optimizer.
+            </p>
+
+            <h3>Processing and Structuring Financial Data</h3>
+            <p>
+                The reliability of any predictive model depends on the quality of data it processes. I worked with over 10,000 financial records, 
+                employing libraries like pandas and numpy to clean, structure, and prepare the data for training and testing. This meticulous 
+                preprocessing ensured the model's robustness and accuracy, making it a reliable tool for real-world applications.
+            </p>
+
+            <h3>Impact and Takeaways</h3>
+            <p>
+                This project represents a significant step in bridging data science and finance through technology. By integrating real-time 
+                data retrieval, advanced visualizations, and machine learning, the application empowers users to make informed financial decisions 
+                with confidence. The success of this project not only demonstrates the potential of AI in the financial domain but also highlights 
+                the value of combining user-centric design with technical innovation.
+            </p>
+            <p>
+                This journey has reinforced my passion for using data science to solve complex problems and deliver meaningful solutions, inspiring me 
+                to explore further advancements in this dynamic field.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

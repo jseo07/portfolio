@@ -241,7 +241,7 @@ h1{
     -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
     border-radius: 10px;
     position: relative;
-    background-color: lightsteelblue;
+    background-color: white;
 }
 
 .scrollable-container::-webkit-scrollbar {
@@ -265,7 +265,7 @@ h1{
 
 .image-caption {
   font-size: 16px; /* Adjust text size as needed */
-  color: #555; /* Optional: Text color */
+  color: black; /* Optional: Text color */
   margin-right: 10px;
   user-select: none;
 }
@@ -337,4 +337,74 @@ h1{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.postcontainer {
+  background-color: white;
+  width: 90%;
+  height: calc(90% - 60px);
+  position: absolute; /* Or 'fixed' if needed */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column; /* Ensures children are stacked vertically */
+  align-items: flex-start; /* Aligns children to the top */
+  justify-content: flex-start; /* Aligns children to the top */
+  border-radius: 20px;
+  overflow-y: auto;
+  max-height: 100%;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+
+.postcontainer::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
+}
+
+.postbox {
+  width: 100%; /* Adjust width as needed */
+  padding: 45px; /* Optional: Add padding for spacing */
+  display: grid;
+  grid-template-rows: auto;
+}
+
+.postbox img{
+  padding-bottom: 10px;
+}
+
+.postbox .images{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.postbox .images img{
+  width: 100%;
+  height: auto;
+}
+
+.subimages{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 70%;
+  padding-left: 20px;
+}
+
+.postdescription{
+  line-height: 2.8;
+  padding: 20px;
+}
+
+.imgdescription{
+  color: darkslategray;
+ font-size: 0.9em;
+}
+
+.imggmci{
+  display: absolute;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }

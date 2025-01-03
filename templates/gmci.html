@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block main %}
+<div class="postcontainer">
+    <div class="postbox">
+        <h2>Criminal Composite Generation with Generative Adversarial Network and User-defined Latent Space Optimization</h2>
+        <div class="imggmci">
+                <img src="{% static 'images/mise.png' %}" alt=""> 
+                <p class="imgdescription">Fig 1. Tableau Dashboard with visualization of past stock prices and dividends of Microsoft (MSFT).</p>
+        </div>
+        <div class="postdescription">
+            <i>2 minute read</i> <br>
+            <a href="https://github.com/jseo07/GMCI" target="_blank">Github Link</a> <br>
+            <a href="https://www.linkedin.com/in/jangwon-seo-/details/projects/1735884172587/single-media-viewer/?profileId=ACoAADkns5sBSo8S7Y9GCLA_kTZlNWkiJnK56Ps" target="_blank">Project Report</a> <br>
+            <a href="https://colab.research.google.com/drive/1pYypjc6da_08OB29bEyjSpSlekgJiZrD?usp=sharing" target="_blank">Google Colab for easy testing</a>
+            <h3>Generative Adversarial Network for Composite Generation</h3>
+            <p>
+                This project, submitted to the International Science and Engineering Fair (ISEF) 2021, explores and optimizes the latent space and noise 
+                vectors of pre-existing Generative Adversarial Networks (GANs) to achieve refined and meaningful composite image generation. Instead of 
+                designing or training new GAN architectures, I leveraged existing models to investigate how adjustments in latent space and noise vectors 
+                influence the generated outputs.
+            </p>
+        
+            <h3>Understanding and Manipulating Latent Space</h3>
+            <p>
+                The latent space of GANs serves as the creative foundation for generating outputs. By systematically analyzing this space, I identified key 
+                patterns and dimensions that influence specific visual characteristics of the generated images. Using these insights, I developed techniques 
+                to manipulate the latent vectors, enabling controlled generation of images with desired attributes.
+            </p>
+        
+            <h3>Optimizing Noise Vectors for Better Outputs</h3>
+            <p>
+                Noise vectors play a crucial role in the randomness and diversity of GAN outputs. I experimented with different distributions and scaling 
+                techniques for the noise vectors, optimizing their initialization to enhance the quality and variety of generated composites. This process 
+                provided a deeper understanding of how GANs interpret and translate noise into meaningful features.
+            </p>
+        
+            <h3>Results and Applications</h3>
+            <p>
+                The optimizations yielded significantly improved image quality and consistency, demonstrating the potential for controlled and customized 
+                generation in GANs. This project has practical applications in fields like art generation, synthetic data creation, and design automation, 
+                showcasing how latent space exploration can bridge creative intent with technical execution.
+            </p>
+        
+            <h3>Impact and Takeaways</h3>
+            <p>
+                By focusing on optimization within the latent space and noise vectors, this project underscored the importance of parameter tuning and creative 
+                exploration in using GANs effectively. The submission to ISEF 2021 was a valuable experience, allowing me to present my work on an international 
+                stage and receive feedback from experts in science and engineering. It enhanced my skills in working with advanced machine learning models and 
+                deepened my understanding of generative techniques, inspiring me to further investigate the transformative potential of GANs in creative and 
+                technical domains.
+            </p>
+            <p>
+                This experience has solidified my passion for machine learning and its intersection with creativity, motivating me to explore innovative ways 
+                to apply generative models to solve real-world challenges.
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

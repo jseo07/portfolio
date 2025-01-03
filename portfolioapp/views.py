@@ -46,3 +46,9 @@ def contact_view(request):
 
 def under_construction(request):
     return render(request, 'under_construction.html')
+
+def lstm(request):
+    return render(request, 'post-lstm.html')
+
+def gmci(request):
+    return render(request, 'gmci.html')
